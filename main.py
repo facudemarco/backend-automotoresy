@@ -4,6 +4,7 @@ from models.cars import Cars
 from routers.sell_car import router as routerSell
 from routers.cars import router as routerCar
 from routers.contact import router as routerContact
+from routers.financial import router as routerFinancial
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -30,4 +31,5 @@ if __name__ == "__main__":
 
 app.include_router(routerCar)
 app.include_router(routerSell)
+app.include_router(routerFinancial)
 app.include_router(routerContact)
