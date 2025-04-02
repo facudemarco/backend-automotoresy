@@ -2,10 +2,10 @@ import mysql.connector
 
 def getConnection():
     config = {
-        'user': 'admin',
+        'user': 'u830440565_facundo2',
         'password': 'Iweb.2025!',
-        'host': 'automotores-yrigoyen-db.cx6mgus88zkq.sa-east-1.rds.amazonaws.com',
-        'database': 'automotores-yrigoyen-db',
+        'host': '193.203.175.121',
+        'database': 'u830440565_automotores_yr',
         'raise_on_warnings': True,
         'port': '3306'
     }

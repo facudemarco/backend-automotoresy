@@ -46,7 +46,7 @@ def getCar(id: str):
     cursor = connection.cursor(dictionary=True)
 
     cursor.execute("SELECT * FROM `Cars` WHERE id = %s", (id,))
-
+    
     car = cursor.fetchone()
     cursor.close()
 
