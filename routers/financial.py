@@ -17,6 +17,9 @@ class FormData(BaseModel):
     cuit: str
     estado_tributario: str
     estado_civil: str
+    modelo_car: str
+    marca_car: str
+    price_car: int
 
 def enviar_email(form_data: FormData):
     sender_email = "fac.demarco37@gmail.com"
