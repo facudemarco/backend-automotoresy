@@ -12,7 +12,7 @@ load_dotenv()
 router = APIRouter()
 
 class FormData(BaseModel):
-    year_model: date
+    year_model: str
     marca: str
     modelo: str
     nombre_apellido: str
