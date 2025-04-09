@@ -69,8 +69,8 @@ def createCar(cars: Cars):
         raise HTTPException(status_code=500, detail="Connection to the database failed.")
     cursor = connection.cursor()
 
-    cursor.execute("INSERT INTO `Cars`(`ID`, `marca`, `modelo`, `km`, `anio`, `combustible`, `precio`, `motor`, `carroceria`, `aire_acondicionado`, `puertas`, `transmision`, `litros`, `frenos`, `airbag`, `sensor`, `permuta`, `traccion`, `anticipo`, `imagen1`, `imagen2`, `imagen3`, `imagen4`, `hidraulica`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                  (generated_id, cars.marca, cars.modelo, cars.km, cars.anio, cars.combustible, cars.precio, cars.motor, cars.carroceria, cars.aire_acondicionado, cars.puertas, cars.transmision, cars.litros, cars.frenos, cars.airbag, cars.sensor, cars.permuta, cars.traccion, cars.anticipo, cars.imagen1, cars.imagen2, cars.imagen3, cars.imagen4, cars.hidraulica))
+    cursor.execute("INSERT INTO `Cars`(`ID`, `marca`, `modelo`, `km`, `anio`, `combustible`, `precio`, `motor`, `carroceria`, `aire_acondicionado`, `puertas`, `transmision`, `litros`, `frenos`, `airbag`, `sensor`, `permuta`, `traccion`, `anticipo`, `imagen1`, `imagen2`, `imagen3`, `imagen4`, `hidraulica`, `tipo`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                  (generated_id, cars.marca, cars.modelo, cars.km, cars.anio, cars.combustible, cars.precio, cars.motor, cars.carroceria, cars.aire_acondicionado, cars.puertas, cars.transmision, cars.litros, cars.frenos, cars.airbag, cars.sensor, cars.permuta, cars.traccion, cars.anticipo, cars.imagen1, cars.imagen2, cars.imagen3, cars.imagen4, cars.hidraulica, cars.tipo))
     connection.commit()
 
     cursor.close()
@@ -90,7 +90,7 @@ def modProduct(id: str, cars: Cars):
 
     cursor = connection.cursor()
 
-    cursor.execute("UPDATE `Cars` SET marca = %s, modelo = %s, km = %s, anio = %s, combustible = %s, precio = %s, motor = %s, carroceria = %s, aire_acondicionado = %s, puertas = %s, transmision = %s, litros = %s, frenos = %s, airbag = %s, sensor = %s, permuta = %s, traccion = %s, anticipo = %s, imagen1 = %s, imagen2 = %s, imagen3 = %s, imagen4 = %s, hidraulica = %s  WHERE id = %s", (cars.marca, cars.modelo, cars.km, cars.anio, cars.combustible, cars.precio, cars.motor, cars.carroceria, cars.aire_acondicionado, cars.puertas, cars.transmision, cars.litros, cars.frenos, cars.airbag, cars.sensor, cars.permuta, cars.traccion, cars.anticipo, cars.imagen1, cars.imagen2, cars.imagen3, cars.imagen4, cars.hidraulica,  id))
+    cursor.execute("UPDATE `Cars` SET marca = %s, modelo = %s, km = %s, anio = %s, combustible = %s, precio = %s, motor = %s, carroceria = %s, aire_acondicionado = %s, puertas = %s, transmision = %s, litros = %s, frenos = %s, airbag = %s, sensor = %s, permuta = %s, traccion = %s, anticipo = %s, imagen1 = %s, imagen2 = %s, imagen3 = %s, imagen4 = %s, hidraulica = %s, tipo = %s,  WHERE id = %s", (cars.marca, cars.modelo, cars.km, cars.anio, cars.combustible, cars.precio, cars.motor, cars.carroceria, cars.aire_acondicionado, cars.puertas, cars.transmision, cars.litros, cars.frenos, cars.airbag, cars.sensor, cars.permuta, cars.traccion, cars.anticipo, cars.imagen1, cars.imagen2, cars.imagen3, cars.imagen4, cars.hidraulica, cars.tipo,  id))
     
     connection.commit()
     

@@ -30,3 +30,4 @@ class Cars(BaseModel):
     imagen3: str
     imagen4: str
     hidraulica: bool
+    tipo: str
