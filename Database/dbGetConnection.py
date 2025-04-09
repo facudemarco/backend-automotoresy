@@ -1,14 +1,18 @@
 import mysql.connector
 import mysql
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def getConnection():
     config = {
-        'user': 'u830440565_facundo2',
-        'password': 'Iweb.2025!',
-        'host': '193.203.175.121',
-        'database': 'u830440565_automotores_yr',
+        'user': os.getenv('USER'),
+        'password': os.getenv('PASSWORD'),
+        'host': os.getenv('HOST'),
+        'database': os.getenv('DATABASE'),
         'raise_on_warnings': True,
-        'port': '3306'
+        'port': os.getenv('PORT')
     }
 
     try:

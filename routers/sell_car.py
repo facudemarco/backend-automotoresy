@@ -14,7 +14,7 @@ class FormData(BaseModel):
     nombre_apellido: str
     mail: str
     telefono: str
-    titulo: str
+    imagen: str
     detalles: str
 
 def vender_auto(form_data: FormData):
@@ -22,7 +22,7 @@ def vender_auto(form_data: FormData):
     sender_password = "ifoc prlz usgx mvno"
     receiver_email = "fac.demarco37@gmail.com"
     subject = f"Nuevo mensaje de contacto desde la Web para venta de auto de {form_data.nombre_apellido}"
-    body = f"Nombre y apellido: {form_data.nombre_apellido}\nMail: {form_data.mail}\nTeléfono: {form_data.telefono}\nAño del modelo: {form_data.year_model}\nMarca: {form_data.marca}\nModelo: {form_data.modelo}\nDetalles: {form_data.detalles}"
+    body = f"Nombre y apellido: {form_data.nombre_apellido}\nMail: {form_data.mail}\nTeléfono: {form_data.telefono}\nAño del modelo: {form_data.year_model}\nMarca: {form_data.marca}\nModelo: {form_data.modelo}\nImagen: {form_data.imagen}\nDetalles: {form_data.detalles}"
 
     msg = MIMEMultipart()
     msg['From'] = sender_email

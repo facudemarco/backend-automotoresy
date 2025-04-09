@@ -36,7 +36,7 @@ def enviar_email(form_data: FormData):
         print(f"Error al enviar el correo: {e}")
         raise HTTPException(status_code=500, detail="Error al enviar el correo")
 
-@router.post("/send-email")
-async def send_email(form_data: FormData):
+@router.post("/financial")
+async def financial(form_data: FormData):
     enviar_email(form_data)
     return {"message": "Formulario enviado exitosamente"}
