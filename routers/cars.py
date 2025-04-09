@@ -90,7 +90,7 @@ def modProduct(id: str, cars: Cars):
 
     cursor = connection.cursor()
 
-    cursor.execute("UPDATE `Cars` SET marca = %s, modelo = %s, km = %s, anio = %s, combustible = %s, precio = %s, motor = %s, carroceria = %s, aire_acondicionado = %s, puertas = %s, transmision = %s, litros = %s, frenos = %s, airbag = %s, sensor = %s, permuta = %s, traccion = %s, anticipo = %s, imagen1 = %s, imagen2 = %s, imagen3 = %s, imagen4 = %s, hidraulica = %s, tipo = %s,  WHERE id = %s", (cars.marca, cars.modelo, cars.km, cars.anio, cars.combustible, cars.precio, cars.motor, cars.carroceria, cars.aire_acondicionado, cars.puertas, cars.transmision, cars.litros, cars.frenos, cars.airbag, cars.sensor, cars.permuta, cars.traccion, cars.anticipo, cars.imagen1, cars.imagen2, cars.imagen3, cars.imagen4, cars.hidraulica, cars.tipo,  id))
+    cursor.execute("UPDATE `Cars` SET marca = %s, modelo = %s, km = %s, anio = %s, combustible = %s, precio = %s, motor = %s, carroceria = %s, aire_acondicionado = %s, puertas = %s, transmision = %s, litros = %s, frenos = %s, airbag = %s, sensor = %s, permuta = %s, traccion = %s, anticipo = %s, imagen1 = %s, imagen2 = %s, imagen3 = %s, imagen4 = %s, hidraulica = %s, tipo = %s WHERE id = %s", (cars.marca, cars.modelo, cars.km, cars.anio, cars.combustible, cars.precio, cars.motor, cars.carroceria, cars.aire_acondicionado, cars.puertas, cars.transmision, cars.litros, cars.frenos, cars.airbag, cars.sensor, cars.permuta, cars.traccion, cars.anticipo, cars.imagen1, cars.imagen2, cars.imagen3, cars.imagen4, cars.hidraulica, cars.tipo,  id))
     
     connection.commit()
     
