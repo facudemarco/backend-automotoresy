@@ -18,7 +18,7 @@ class Cars(BaseModel):
     aire_acondicionado: bool
     puertas: int
     transmision: str
-    litros: float
+    estereo_pantalla: bool
     frenos: bool
     airbag: bool
     sensor: bool
