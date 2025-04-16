@@ -9,7 +9,7 @@ class Cars(BaseModel):
     id: Optional[str] = None
     marca: str
     modelo: str
-    km: str
+    km: int
     anio: int
     combustible: str
     precio: int
@@ -24,7 +24,7 @@ class Cars(BaseModel):
     sensor: bool
     permuta: bool
     traccion: str
-    anticipo: str
+    anticipo: int
     imagen1: str
     imagen2: str
     imagen3: str
