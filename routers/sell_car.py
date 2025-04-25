@@ -19,16 +19,16 @@ class FormData(BaseModel):
     mail: str
     telefono: str
     imagen: str
-    detalles: str
+    valor_pretendido: str
 
 def vender_auto(form_data: FormData):
     sender_email = "iweb.contacto@gmail.com"
     sender_password = os.environ.get("SENDER_PASSWORD")
     if not sender_password:
         raise HTTPException(status_code=500, detail="La contraseña del remitente no está configurada")
-    receiver_email = "valeenburi@gmail.com"
+    receiver_email = "automotoresyrigoyen@gmail.com"
     subject = f"Nuevo mensaje de contacto desde la Web para venta de auto de {form_data.nombre_apellido}"
-    body = f"Nombre y apellido: {form_data.nombre_apellido}\nMail: {form_data.mail}\nTeléfono: {form_data.telefono}\nAño del modelo: {form_data.year_model}\nMarca: {form_data.marca}\nModelo: {form_data.modelo}\nImagen: {form_data.imagen}\nDetalles: {form_data.detalles}"
+    body = f"Nombre y apellido: {form_data.nombre_apellido}\nMail: {form_data.mail}\nTeléfono: {form_data.telefono}\nAño del modelo: {form_data.year_model}\nMarca: {form_data.marca}\nModelo: {form_data.modelo}\nImagen: {form_data.imagen}\nValor pretendido: {form_data.valor_pretendido}"
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
