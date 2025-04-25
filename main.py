@@ -6,7 +6,7 @@ from routers.cars import router as routerCar
 from routers.financial import router as routerFinancial
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
 
 origins = [
     "http://localhost:3000",
