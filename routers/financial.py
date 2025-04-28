@@ -28,8 +28,7 @@ def enviar_email(form_data: FormData):
         raise HTTPException(status_code=500, detail="La contraseña del remitente no está configurada")
     receiver_email = "automotoresyrigoyen@gmail.com"
     subject = f"Nuevo mensaje de financiamiento desde la Web de {form_data.nombre_apellido}"
-    body = f"Datos de la consulta: \nNombre y apellido: {form_data.nombre_apellido}\nMail: {form_data.mail}\nTeléfono: {form_data.telefono}\nCUIT: {form_data.cuit}\nEstado tributario: {form_data.estado_tributario} \nEstado civil: {form_data.estado_civil}"
-
+    body = f"Datos de la consulta: \nNombre y apellido: {form_data.nombre_apellido}\nAuto: {form_data.modelo_car} \nMail: {form_data.mail}\nTeléfono: {form_data.telefono}\nCUIT: {form_data.cuit}\nEstado tributario: {form_data.estado_tributario} \nEstado civil: {form_data.estado_civil}"
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = receiver_email
