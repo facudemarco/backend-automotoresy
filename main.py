@@ -13,6 +13,7 @@ origins = [
     "https://automororesirigoyen-website.vercel.app",
     "https://automotoresyrigoyen.com",
     "automotoresyrigoyen.com",
+    "https://crud-automotores.vercel.app",
 ]
 
 app.add_middleware(
